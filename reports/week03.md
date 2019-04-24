@@ -54,8 +54,9 @@
 <dl>
   <dt>Agenda in  TA  Meeting</dt>
 </dl>
-* Harmonization of agreement on user story document.
-* Miscellenous
+
+*  Harmonization of agreement on user story document.
+*  Miscellenous
 
 
 
