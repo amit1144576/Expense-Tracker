@@ -18,7 +18,7 @@
 
 
 <dl>
-  <dd> Week Three.</dd>
+  <dt> Week Three.</dt>
   <dd> Task Achieved in Week Three.</dd>
 </dl>
 
