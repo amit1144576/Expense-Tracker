@@ -41,6 +41,43 @@ padding: 5px;
 background-color: white;
 padding: 5px;
 }
+
+#contents {
+background: whitesmoke;
+max-width: 350px;
+padding: 10px;
+border: 1px solid;
+border-color: gray;
+border-radius: 3px;
+line-height: 28px;
+}
+
+
+.button {
+font: 700 13px Helvetica, Arial;
+height: 30px;
+line-height: 28px;
+padding: 10px 20px 10px 20px;
+}
+
+ul {
+padding: 0px;
+list-style-type: none;
+
+}
+
+li {
+margin-top: 10px;
+
+}
+
+a {
+color: rgb(50,50,50);
+text-decoration: none;
+}
+
+
+
 	</style>
 </head>
 <body>
@@ -75,10 +112,27 @@ padding: 5px;
   </nav>
 </div>
 
+
+                   <!-- Diagrams and descriptions -->
+
+
 <div style="margin: 5px; padding: 5px">
 <br><br>
 <h1>UML Diagrams</h1>
 <br>
+
+<div id="contents">
+<h2> Contents </h2>
+<ul>
+<li> <a class="button" href="https://dbse-teaching.github.io/isee2019-codepros/UMLDiagrams.html#1- Use case Diagram"> Use case Diagram </a> </li>
+<li> <a class="button" href="https://dbse-teaching.github.io/isee2019-codepros/UMLDiagrams.html#2- Class Diagram"> Class Diagram </a> </li>
+<li> <a class="button" href="https://dbse-teaching.github.io/isee2019-codepros/UMLDiagrams.html#3- Sequence Diagram"> Sequence Diagram </a> </li>
+</ul>
+</div>
+</br></br>
+                   <!-- Usecase Diagram -->
+
+
 <h2> 1- Use case Diagram </h2>
 <p class="italic"> Here is the initial draft, illustrated as a use case model for the following discription we got from customer in initial stage. </p>
 <p style="font-style: italic;"> "Spending money is easy, taking control over it is most of the times a challenge. This App should be designed and implemented to help with the latter.
@@ -156,23 +210,23 @@ In case of aborted transaction to database, user will be redirected to register 
 </tr>
 <tr>
 <td class="firstcolumnRodd">Description</td>
-<td class="descriptionRodd">xxxx</td>
+<td class="descriptionRodd">details of daily transactions including both ixpenses and incomes with date and time tags and a comment are going to be filled in this page of applicatin and need to be stored locally and if connected to internet should synchronize with database. The key pad and keyboard should be used where required in oder to be moreuser friendly and minimize typing error. in addition it should provide a check button to make automatic transaction with repeatatively on daiy/weekly/monthly.</td>
 </tr>
 <tr>
 <td class="firstcolumnReven">Pre-conditions</td>
-<td class="descriptionReven">xxxx</td>
+<td class="descriptionReven">clicking on new transaction button and filling all details while comment section need to be optionally filled</td>
 </tr>
 <tr>
 <td class="firstcolumnRodd">Flow of Events</td>
-<td class="descriptionRodd">xxxx</td>
+<td class="descriptionRodd">clicking on new transaction, filling details, clicking finish button</td>
 </tr>
 <tr>
 <td class="firstcolumnReven">Post-conditions</td>
-<td class="descriptionReven">xxxx </td>
+<td class="descriptionReven">all details should be filled and comment is optional </td>
 </tr>
 <tr>
 <td class="firstcolumnRodd">Exit Criteria</td>
-<td class="descriptionRodd"> xxxx </td>
+<td class="descriptionRodd"> clicking on finish button </td>
 </tr>
 </table>
 
@@ -238,6 +292,122 @@ In case of aborted transaction to database, user will be redirected to register 
 
 
 </div>
+</br>
+</br>
+<br><br>
+<br>
+
+
+<!-- Class Diagram -->
+
+
+<h2> 2- Class Diagram </h2>
+<p> </p>
+<p style="font-style: italic;"> </p>
+<br>
+<div class="card mb-4">
+<img class="card-img-top" src="images/ClassDiagram.jpg" title="Class Diagram" alt="Class Diagram" style="max-width: 750px">
+<div class="card-body">
+<h3>Class Diagram overview</h3>
+<h4> 1.1 User </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Use Case Name</th>
+<th class="descriptionH">Register</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Flow of Events</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">xxxx </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Exit Criteria</td>
+<td class="descriptionRodd"> xxxx </td>
+</tr>
+</table>
+</br></br>
+<h4> 1.2 Transactions </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Use Case Name</th>
+<th class="descriptionH">Register</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Flow of Events</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">xxxx </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Exit Criteria</td>
+<td class="descriptionRodd"> xxxx </td>
+</tr>
+</table>
+
+</br></br>
+<h4> 1.3 Database </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Use Case Name</th>
+<th class="descriptionH">Register</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Flow of Events</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">xxxx </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Exit Criteria</td>
+<td class="descriptionRodd"> xxxx </td>
+</tr>
+</table>
+
+</br></br>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
 </div>
   <!-- /.container -->
 
