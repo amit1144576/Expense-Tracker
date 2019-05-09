@@ -26,9 +26,9 @@
 | ------------- |:-------------:| -----:|
 | Slide Design and Presentation | Amit Kumar| Completed |
 | Setting Up of Github and blog pages| Okafor Chigozie Kenneth     |  Completed |
-| Team Management and Organisations| Suhas Shantharam |    Continous |
-| Project Management and Delegation of Tasks| Saied Akbar Ahmady |   Continous |
-| Early Requirement gathering | Nazar Iqbal Warraich |   Continous |
+| Team Management and Organisations| Suhas Shantharam |    Continious |
+| Project Management and Delegation of Tasks| Saied Akbar Ahmady |   Continious |
+| Early Requirement gathering | Nazar Iqbal Warraich |   Continious |
 
 *****
 
