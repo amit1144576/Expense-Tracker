@@ -1,4 +1,4 @@
-package com.example.application;
+package com.example.applicationprototype;
 
         import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
