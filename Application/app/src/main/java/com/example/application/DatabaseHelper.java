@@ -1,4 +1,4 @@
-package com.example.application;
+package com.example.applicationprototype;
 
         import android.content.ContentValues;
         import android.content.Context;
@@ -47,9 +47,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + CATEGORIES_TABLE_NAME + "(categories_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "categories_Name TEXT UNIQUE)");
         db.execSQL("CREATE TABLE " + EXPENSES_TABLE_NAME + "(expenses_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "expenses_value INTEGER,expense_name TEXT, expenses_Date DATE,FOREIGN KEY(expense_categories_id) REFERENCES CATEGORIES_TABLE_NAME(categories_id) )");
+                "expenses_value INTEGER,expense_name TEXT, expenses_Date DATE, expense_categories_id INTEGER, FOREIGN KEY(expense_categories_id) REFERENCES CATEGORIES_TABLE_NAME(categories_id) )");
         db.execSQL("CREATE TABLE " + INCOME_TABLE_NAME + "(income_id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "income_value INTEGER,income_name TEXT,income_Date DATE, FOREIGN KEY(income_categories_id) REFERENCES CATEGORIES_TABLE_NAME(categories_id))");
+                "income_value INTEGER,income_name TEXT,income_Date DATE, income_categories_id INTEGER, FOREIGN KEY(income_categories_id) REFERENCES CATEGORIES_TABLE_NAME(categories_id))");
     }
 
     @Override
@@ -74,9 +74,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean checkUser(String username, String password) {
         String[] columns = { REGISTER_ID };
         SQLiteDatabase db = getReadableDatabase();
-        String selection = REGISTER_USERNAME + "m?" + " and " + REGISTER_PASSWORD + "m?";
-        String [] selectionArgs = { username, password};
-        Cursor cursor = db.query(REGISTER_TABLE_NAME, columns, selection, selectionArgs, null, null,null);
+        String selection = REGISTER_USERNAME + " = ?" + " AND " + REGISTER_PASSWORD + " = ?";
+        String [] selectionArgs = {username, password};
+        Cursor cursor = db.query(REGISTER_TABLE_NAME,
+                columns,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null);
         int count = cursor.getCount();
         cursor.close();
         db.close();
@@ -88,4 +94,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 }
+
 
