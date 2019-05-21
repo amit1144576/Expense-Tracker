@@ -1,4 +1,4 @@
-package com.example.application;
+package com.example.applicationprototype;
 
         import android.content.Intent;
         import android.support.v7.app.AppCompatActivity;
@@ -42,7 +42,9 @@ public class LoginActivity<override> extends AppCompatActivity {
                 Boolean res = db.checkUser(user, pwd);
                 if(res == true)
                 {
-                    Toast.makeText(LoginActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(LoginActivity.this,"Login Successful", Toast.LENGTH_SHORT).show();
+                    openNewActivity();
+//        }
                 }
                 else
                 {
@@ -53,6 +55,8 @@ public class LoginActivity<override> extends AppCompatActivity {
 
         });
     }
-
+         public void openNewActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
-
