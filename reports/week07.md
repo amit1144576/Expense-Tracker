@@ -1,6 +1,6 @@
 <dl>
   <dt>Code Pro's Weekly Report</dt>
-  <dd> Task From Week Five</dd>
+  <dd> Task From Week Six</dd>
 </dl>
 
 | Tasks        | To be  Actualized by | 
@@ -23,17 +23,9 @@
 
 
 <dl>
-  <dt> Week Six.</dt>
-  <dd> Task Achieved in Week Five.</dd>
+  <dt> Week Seven.</dt>
+  <dd> Task Achieved in Week Seven</dd>
 </dl>
-
-| Tasks        | Actualized by           | Completed / Moved / Continous|
-| ------------- |:-------------:| -----:|
-| Prototype building | Amit Kumar| Moved |
-| Creation of blog post, slides and presentations| Okafor Chigozie Kenneth     |  Completed |
-| Documenting User Story| Suhas Shantharam |    Completed |
-| Documenting User Story and Block diagram | Saied Akbar Ahmady |   Completed |
-| Management and Organisations | Nazar Iqbal Warraich |   Continious |
 
 
 | Tasks        | To be  Actualized by |  Completed / Moved / Continous/ Done by|
@@ -51,7 +43,7 @@
 
 
 <dl>
-  <dt>Task Schedule for week Seven</dt>
+  <dt>Task Schedule for week Eight</dt>
 </dl>
 
 
