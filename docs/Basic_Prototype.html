@@ -15,6 +15,52 @@
 
   <!-- Custom styles for this template -->
   <link href="css/blog-home.css" rel="stylesheet">
+  <style>
+.firstcolumnH {
+background-color: gray;
+color: white;
+width: 150px;
+padding: 7px;
+}
+
+.descriptionH {
+background-color: gray;
+color: white;
+padding: 7px;
+}
+
+.firstcolumnRodd {
+background-color: whitesmoke;
+width: 150px;
+padding: 5px;
+}
+
+.descriptionRodd {
+background-color: whitesmoke;
+padding: 5px;
+}
+
+.firstcolumnReven {
+background-color: white;
+width: 150px;
+padding: 5px;
+}
+
+.descriptionReven {
+background-color: white;
+padding: 5px;
+}
+
+#contents {
+background: whitesmoke;
+max-width: 350px;
+padding: 10px;
+border: 1px solid;
+border-color: gray;
+border-radius: 3px;
+line-height: 28px;
+}
+</style>
 
 </head>
 
@@ -61,15 +107,275 @@
         </h1>
 
         <!-- Blog Post -->
+		
+		<div class="card my-4">
+          <h5 class="card-header">contents of this page</h5>
+		  <div ><a class="nav-link" href="#Use case Diagram"> Use case Diagram</a></div>
+		  <div ><a class="nav-link" href="#Class Diagram"> Class Diagram</a></div>
+		  <div ><a class="nav-link" href="#Activity Diagram1"> Activity Diagrams 1</a></div>
+		  <div ><a class="nav-link" href="#Activity Diagram2"> Activity Diagrams 2</a></div>
+		  
+        </div>
+		
         <div class="card mb-4">
-          <img class="card-img-top" src="images/teampresentation.JPG" alt="teampresentation">
+          <img class="card-img-top" src="images/UsecaseDiagram.JPG" alt="UsecaseDiagram">
           <div class="card-body">
-            <h2 class="card-title">title</h2>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-            </div>
+            <h2 class="card-title">1- Use case Diagram</h2>
+			<p class="card-text"> Here is the initial draft, illustrated as a use case model for the following discription we got from customer in initial stage.</p>
+			<p class="card-text"> "Spending money is easy, taking control over it is most of the times a challenge. This App should be designed and implemented to help with the latter. It should allow users to (manually) specify what they spent their money for. Given some income (that can be specified as well), it allows you at any time to double-check whether your money is in balance or not. Moreover, maintaining a history of your inputs allows to observe how your behavior has changed, which is especially useful to get rid of imbalances. Also, some statistics should be show virtually to the user."</p>
+            <h3>Use cases overview</h3>
+<h4> 1.1 Register </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Use Case Name</th>
+<th class="descriptionH">Register</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">User should register for the first time and requires to select level of security in initial stage as if want to protect app using password/pin</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">User identification information being filled </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Flow of Events</td>
+<td class="descriptionRodd">User opens app, fill name L/name date of birth, currency and optional password, click signup button, app send synchronized message to database, leads to initial stage page to fill transactions </td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">initial stage page to fill transactions will appear </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Exit Criteria</td>
+<td class="descriptionRodd">In case of successful transaction to database will lead user to initial stage for filling data
+In case of aborted transaction to database, user will be redirected to register page
+</td>
+</tr>
+</table>
+</br></br>
+<h4> 1.2 Login </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Use Case Name</th>
+<th class="descriptionH">Register</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">If in case no password being assigned, user can use app just by clicking on app And if app protected using password/pin user need to fill password while username will be remained in cache and by clicking signin button synchronized message will be sent to database and act accordingly</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">Secure authentication type being selected Correct username & password </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Flow of Events</td>
+<td class="descriptionRodd">User opens app, fill password/pin and username if delated from cache, click login button, app send synchronized message to database, access will be granted based on database response</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">Authentication succeed </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Exit Criteria</td>
+<td class="descriptionRodd"> call logout </td>
+</tr>
+</table>
+
+</br></br>
+<h4> 1.3 Filling Data </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Use Case Name</th>
+<th class="descriptionH">Register</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">details of daily transactions including both expenses and incomes with date and time tags and an optional comment are going to be filled in this page of applicatin and need to be stored locally and if connected to internet should synchronize with database. The key pad and keyboard should be used where required in oder to be moreuser friendly and minimize typing error. in addition it should provide a check button to make automatic transaction with repeatatively on daiy/weekly/monthly.</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">clicking on new transaction button and filling all details while comment section need to be optionally filled</td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Flow of Events</td>
+<td class="descriptionRodd">clicking on new transaction, filling details, clicking finish button</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">all details should be filled and comment is optional </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Exit Criteria</td>
+<td class="descriptionRodd"> clicking on finish button </td>
+</tr>
+</table>
+
+</br></br>
+<h4> 1.4 Automated Transactions </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Use Case Name</th>
+<th class="descriptionH">Register</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">In order to help user not to forget some repeatative transactions, there will be a checkbox to be selected and daily/weekly/monthly or user defined based on number of days for transactions.</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">All details of the page should be filled (comment is optional).</td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Flow of Events</td>
+<td class="descriptionRodd">After filling details of transaction and before clicking add button, there will be a checkbox to be selected if in case it is repeatative transaction. by selecting this checkbox, additional part of form will become visible like daily/weekly/monthly or user specified number of days to be filled and finally should click finish button</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">all details should be filled and comment is optional </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Exit Criteria</td>
+<td class="descriptionRodd"> clicking on finish button </td>
+</tr>
+</table>
+
+</br></br>
+<h4> 1.5 View Transactions </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Use Case Name</th>
+<th class="descriptionH">Register</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">User should be able to view transactions log history. a tabulated history and some graphical representation like balance and expenses categories need to be shown on main page</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">One or more transactions should have been filled otherwise a blank page with the comment "No transactions found. Please add new Transaction." need to be represented</td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Flow of Events</td>
+<td class="descriptionRodd">After sign in user will be directed to this page and an "add new transaction" option will be there.</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">xxxx </td>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Exit Criteria</td>
+<td class="descriptionRodd">Clicking on exit button to exit from app or adding new transactions to direct to new page  </td>
+</tr>
+</table>
+			</div>
+        </div>
+		
+		<!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="images/ClassDiagram.JPG" alt="Class Diagram">
+          <div class="card-body">
+            <h2 class="card-title" > <a name="Class Diagram">2- Class Diagram</a></h2>
+			<p class="card-text"> This is the initial draft of class diagram which represent the basic requiremtents regardless of GUI relevant classes and additional libraries. The most complete one will be provided later.</p>
+			<h3>Class Diagram overview</h3>
+<h4> 2.1 User </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Class Name</th>
+<th class="descriptionH">Details</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">Operation1:</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">Operation2:</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">Operation1: </td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">Operation2: </td>
+</tr>
+</table>
+</br></br>
+<h4> 2.2 Transactions </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Class Name</th>
+<th class="descriptionH">Details</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">Operation1:</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">Operation2:</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">Operation1: </td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">Operation2: </td>
+</tr>
+</table>
+
+</br></br>
+<h4> 2.3 Database </h4>
+<table>
+<tr>
+<th class="firstcolumnH">Class Name</th>
+<th class="descriptionH">Details</th>
+</tr>
+<tr>
+<td class="firstcolumnRodd">Description</td>
+<td class="descriptionRodd">xxxx</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">Operation1:</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Pre-conditions</td>
+<td class="descriptionReven">Operation2:</td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">Operation1: </td>
+</tr>
+<tr>
+<td class="firstcolumnReven">Post-conditions</td>
+<td class="descriptionReven">Operation2: </td>
+</tr>
+</table>
+			
+			</div>
         </div>
 		
 		
+		<!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="images/activitydiagram.JPG" alt="activitydiagram">
+          <div class="card-body">
+            <h2 class="card-title"><a name="Activity Diagram1"> 3- First Activity Diagram </a></h2>
+			<h3>Overview of Activity Digaram</h3>
+			<p class="card-text"> In this cenario user opens the application and application in response asks user to fill user name and password in order to login. After filling username and password, application will verify it and in case of false, it will be redirected to login page to fill the username and password again. And if in case it was true, application will direct the user to a new page which the user can view recent transactions and add new transaction if he/she want. User Can view Statistical charts and transactions log and can add new transactions which the application in response will store it in database.</p>
+			</div>
+        </div>
 	   
 
 
