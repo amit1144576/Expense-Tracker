@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public EditText editTextPassword1;
     public TextView txtview;
     public TextView textViewLogin;
+    public TextView textViewGuest;
     public ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
 
@@ -41,16 +42,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewLogin = (TextView) findViewById(R.id.textViewLogin);
         editTextEmail1 = (EditText) findViewById(R.id.editTextEmail1);
         editTextPassword1 = (EditText) findViewById(R.id.editTextPassword1);
+        textViewGuest = (TextView) findViewById(R.id.textViewGuest);
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
 
         if(firebaseAuth .getCurrentUser()!=null){
 
             //go to add tranaction page if user is already loggedin
-            
+
         }
 
         textViewLogin.setOnClickListener(this);
+        textViewGuest.setOnClickListener(this);
+
         txtview.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
@@ -91,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 progressDialog.dismiss();
+
             }
 
         });
@@ -111,6 +116,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view == txtview) {
             Intent intent = new Intent(MainActivity.this,
                     Register.class);
+            startActivity(intent);
+        }
+
+        if(view == textViewGuest) {
+            Intent intent = new Intent(MainActivity.this,
+                    AddTransactions.class);
             startActivity(intent);
         }
     }
