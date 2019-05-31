@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.barchart">
+    package="com.ISEE2019_CODEPROS_team.MoneyCTRL">
 
     <application
         android:allowBackup="true"
@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddNewTrans"></activity>
-        <activity android:name=".InitailSetup" />
-        <activity android:name=".Register" />
-        <activity android:name=".TransView" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.ISEE2019_CODEPROS_team.MoneyCTRL.View.AddNewTrans"></activity>
+        <activity android:name="com.ISEE2019_CODEPROS_team.MoneyCTRL.View.InitailSetup" />
+        <activity android:name="com.ISEE2019_CODEPROS_team.MoneyCTRL.View.Register" />
+        <activity android:name="com.ISEE2019_CODEPROS_team.MoneyCTRL.View.TransView" />
+        <activity android:name="com.ISEE2019_CODEPROS_team.MoneyCTRL.View.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
