@@ -1,5 +1,5 @@
 package com.example.prototype1;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,14 +10,25 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
+import static com.example.prototype1.R.id.fab;
+
 public class AddTransactions extends AppCompatActivity {
+
+
+
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_transactions);
         Toolbar toolbar = findViewById(R.id.toolbar);
+       // FloatingActionButton fab = findViewById(R.id.fab);
         setSupportActionBar(toolbar);
+        firebaseAuth = FirebaseAuth.getInstance();
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,7 +59,18 @@ public class AddTransactions extends AppCompatActivity {
 
                 Toast.makeText(this,"home clicked",Toast.LENGTH_SHORT).show();
 
+            case R.id.logout: {
+
+                    firebaseAuth.signOut();
+                    finish();
+                    startActivity(new Intent(this, MainActivity.class));
+                    Toast.makeText(this, "User Logout success", Toast.LENGTH_SHORT).show();
+
+            }
         }
+
+
+
 
         return true;
     }

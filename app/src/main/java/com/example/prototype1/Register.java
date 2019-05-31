@@ -38,6 +38,13 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         findViewById(R.id.textViewRegister).setOnClickListener(this);
         findViewById(R.id.textViewLogin1).setOnClickListener(this);
 
+
+        if(mAuth.getCurrentUser()!=null){
+
+            //go to add tranaction page if user is already loggedin
+            finish();
+            startActivity(new Intent(getApplicationContext(), AddTransactions.class));
+        }
     }
 
     private void registerUser() {

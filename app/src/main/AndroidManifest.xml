@@ -12,7 +12,7 @@
         <activity
             android:name=".AddTransactions"
             android:label="@string/title_activity_add_transactions"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.actions"

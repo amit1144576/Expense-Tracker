@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public TextView textViewLogin;
     public TextView textViewGuest;
     public ProgressDialog progressDialog;
+    public static boolean guestFlag = false;
     private FirebaseAuth firebaseAuth;
 
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(firebaseAuth .getCurrentUser()!=null){
 
             //go to add tranaction page if user is already loggedin
-
+            startActivity(new Intent(getApplicationContext(), AddTransactions.class));
         }
 
         textViewLogin.setOnClickListener(this);
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        progressDialog.setMessage("Registering..");
+        progressDialog.setMessage("Authenticating..");
         progressDialog.show();
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this,new OnCompleteListener<AuthResult>(){
 
@@ -95,6 +96,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 progressDialog.dismiss();
+                if(task.isSuccessful()){
+                    guestFlag = false;
+                    finish();
+                    startActivity(new Intent(getApplicationContext(), AddTransactions.class));
+                }
+
 
             }
 
@@ -120,6 +127,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         if(view == textViewGuest) {
+
+            firebaseAuth.signOut();
+            finish();
+            guestFlag = true;
             Intent intent = new Intent(MainActivity.this,
                     AddTransactions.class);
             startActivity(intent);
