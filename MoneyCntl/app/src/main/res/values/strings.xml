@@ -1,16 +1,4 @@
 <resources>
-    <string name="app_name">MoneyCntrl</string>
-    <string name="Name">Name</string>
-    <string name="FirstName">First Name</string>
-    <string name="Password">Password</string>
-    <string name="Email">Email</string>
-    <string name="InitialBudget">Initial Budget</string>
-    <string name="usename">User Name</string>
-    <string name="registerbtn">Not Registered? REGISTER</string>
-    <string name="passwordConfirm">Confirm password</string>
-    <string name="lastName">Last Name</string>
-    <string-array name="selectTransType">
-        <item>Expendature</item>
-        <item>Income</item>
-    </string-array>
+    <string name="app_name">WMEurosWent</string>
+    <string name="title_activity_sing_in">SingIn</string>
 </resources>
