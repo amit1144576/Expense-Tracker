@@ -5,63 +5,73 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.List;
 
 public class TransView extends AppCompatActivity {
 
-    private DatabaseViewModel databaseViewModel;
 
-    private FloatingActionButton addNewTransaction;
+    // recycler view as follows:
 
+    private TransactionsViewModel transactionsViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        /*
-        addNewTransaction = findViewById(R.id.add_transaction);
-        addNewTransaction.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openActivityNewTrans();
-            }
-        });
-        */
-
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_trans_view);
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = findViewById(R.id.trans_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setHasFixedSize(true);
 
         final TransactionsAdapter adapter = new TransactionsAdapter();
+        recyclerView.setAdapter(adapter);
 
-        databaseViewModel = ViewModelProviders.of(this).get(DatabaseViewModel.class);
-        databaseViewModel.getAllDatabase().observe(this, new Observer<List<Transactions>>() {
+        transactionsViewModel = ViewModelProviders.of(this).get(TransactionsViewModel.class);
+        transactionsViewModel.getAllTransOrderByAmount().observe(this, new Observer<List<Transactions>>() {
             @Override
             public void onChanged(List<Transactions> transactions) {
+
                 adapter.setTransactions(transactions);
             }
         });
     }
 
-    /*
-    public void openActivityNewTrans(){
 
-        Intent intent = new Intent(this, AddNewTransaction.class);
-        startActivity(intent);
+    // menu option relevant code
+    // Toast.makers should be replaced with relevant code to open new pages
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.settings_menu, menu);
+        return true;
     }
-    */
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.set_currency:
+                Toast.makeText(this, "currency clicked", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.change_password:
+                Toast.makeText(this, "change_password clicked", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.categorical_charts:
+                Toast.makeText(this, "categorical_charts clicked", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.income_expense:
+                Toast.makeText(this, "Income graph clicked", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.set_exit:
+                Toast.makeText(this, "Exit clicked", Toast.LENGTH_SHORT).show();
+                return true;
+             default:
+                 return super.onOptionsItemSelected(item);
+        }
+
+    }
 }

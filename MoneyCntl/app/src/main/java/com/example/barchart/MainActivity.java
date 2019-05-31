@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnReg;
     private Button btnSkipReg;
     private Button btnSignIn;
+    private Button gotoPickDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        gotoPickDate = findViewById(R.id.button2);
+        gotoPickDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDatePickerFragment();
+            }
+        });
+
     }
 
     public void openRegister(){
@@ -50,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openTransView(){
         Intent intent = new Intent(this, TransView.class);
+        startActivity(intent);
+    }
+
+    public void openDatePickerFragment(){
+        Intent intent = new Intent(this, AddNewTrans.class);
         startActivity(intent);
     }
 }

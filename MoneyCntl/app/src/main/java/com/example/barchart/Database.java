@@ -37,7 +37,7 @@ public abstract class Database extends RoomDatabase {
         }
     };
 
-    private static class PopulateDbAsyncTask extends AsyncTask<Void, Void, Void>{
+    private static class PopulateDbAsyncTask extends AsyncTask <Void, Void, Void> {
 
         private TransactionsDao transactionsDao;
 

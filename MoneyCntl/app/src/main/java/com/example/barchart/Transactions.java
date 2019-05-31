@@ -14,13 +14,13 @@ public class Transactions {
 
     private String description;
 
-    //private Boolean transTypeIncome;
+    //private String transTypeIncome;
 
     private String transCategory;
 
     //private String transType;
 
-    //private Boolean repeatative;
+    //private String repeatative;
 
     //private Date transDate;
 
