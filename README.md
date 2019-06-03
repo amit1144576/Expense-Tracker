@@ -15,6 +15,6 @@ Below is a brief description of what we meant to do.
 
 "Spending money is easy, taking control over it is most of the times a challenge. This App should be designed and implemented to help with the latter. It should allow users to (manually) specify what they spent their money for. Given some income (that can be specified as well), it allows you at any time to double-check whether your money is in balance or not. Moreover, maintaining a history of your inputs allows to observe how your behavior has changed, which is especially useful to get rid of imbalances. Also, some statistics should be show virtually to the user."
 
-The link to the .apk file will be soon provided here...
+The link to the basic prototype .apk file :https://drive.google.com/open?id=1Rmle9HH4k7BUEckAM0aq2ubGiz3RTVgi
 
 Please follow our progress as well as documentation in our blog using the link https://dbse-teaching.github.io/isee2019-codepros/
