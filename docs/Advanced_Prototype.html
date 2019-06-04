@@ -63,9 +63,9 @@
         <!-- Blog Post -->
         <div class="card mb-4">
           <div class="card-body">
-		  <img class="card-img-top" src="images/MVVM.png" alt="MVVM">
             <h2 class="card-title">Design Pattern</h2>
 			<h4 class="card-title">Model View ViewModel (MVVM)</h4>
+		  <img class="card-img-top" src="images/MVVM.png" alt="MVVM">
 			<p class="card-text"> Model–view–viewmodel (MVVM) is a software architectural pattern.</p>
 			<p class="card-text"> MVVM was designed to make use of data binding functions  to better facilitate the separation of view layer development from the rest of the pattern, by removing virtually all GUI code ("code-behind") from the view layer. The View Code is separate from Model code . Each layer can only have access to the layer below it .The ViewModel acts as a bridge between the View layer code and Model layer code  as it provides better abstraction ,integrity and allows data to survive configuration changes. </p>
 			</br>
@@ -101,22 +101,27 @@
 		
 		<div class="card mb-4">
           <div class="card-body">
-          <img class="card-img-top" src="images/ClassDiagram_color_MVVM.png" alt="ClassDiagram_color_MVVM">
             <h2 class="card-title">Class Diagram</h2>
 			<p class="card-text"> The Class Diagram consists of 5 Navigation screens :MainActivity,regsiter,StatisticalGraphs,AddNewTransaction and TransView .It contains 2 entites in User,Transactions which reference the UserDao and TransactionsDao respectively .The ViewModel objects include DatabaseViewModel,TransactionAdapter and UserDB.Additional classes like AppCompatActivity,Room etc provide with transition ,visual and database capabilities </p>
+		  <img class="card-img-top" src="images/ClassDiagram_color_MVVM.png" alt="ClassDiagram_color_MVVM">
 		  <p class="card-text"> Legend Used :</p>
 				<li>Red: Activity/Fragment is the View of the design pattern</li>
 				<li>Green:  Model of architecture </li>
 				<li>Blue:  ViewModel</li>
 				<li>Orange : Additional classes provided by android studio which we took an extension from </li>
+				</br>
+			<img class="card-img-top" src="images/reason_of _change.JPG" alt="ClassDiagram_color_MVVM">
+			<p class="card-text"> Since we hade to make a GUI and build a user friendly application, we need to comly with some additional libraries and classes like MP charts, Datepicker, Roomdatabse, Adapter and so on.</p>
             </div>
         </div>
 		
 	   
 	   <div class="card mb-4">
           <div class="card-body">
-		  <img class="card-img-top" src="images/logingscreens.JPG" alt="logingscreens">
             <h2 class="card-title">Storyboards</h2>
+			<p class="card-text"> There are some screen shots provided from the app and we will discuss storyboards based on </p>
+		  <img class="card-img-top" src="images/logingscreens.JPG" alt="logingscreens">
+			<img class="card-img-top" src="images/logingscreens2.JPG" alt="logingscreens">
 			<h4 class="card-title">Case 1>:</h4>
 	
                   <p class="card-text"> User : IT Employee </p>
@@ -132,7 +137,6 @@
    <li> •  In the Transactions page , he can click on the settings icon from where he can logout of the system.</li>
 			
 			</br>
-			<img class="card-img-top" src="images/logingscreens2.JPG" alt="logingscreens">
 			<h4 class="card-title">Case 2>:</h4>
 	
                   <p class="card-text"> User : Student </p>
@@ -141,14 +145,20 @@
 
 		   <p class="card-text">Sequence of screens he encounters : </p>
 	  
-	<li> a) He opens the app and sees that he needs to register to be able to use the app.</li>
-<li>b) So ,he clicks on the register here button where he will be asked to provide his username , password and also confirm his password .</li>
-<li>c) He clicks on the done button after entering his details which then again takes him back to the login page .</li>
+				<li> a) He opens the app and sees that he needs to register to be able to use the app.</li>
+				<li>b) So ,he clicks on the register here button where he will be asked to provide his username , password and also confirm his password .</li>
+				<li>c) He clicks on the done button after entering his details which then again takes him back to the login page .</li>
 	
             </div>
         </div>
 		
-	   
+	   <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">MoneyCTRL app</h2>
+			<p class="card-text"> Please download the .apk file from here:</p>
+			<p class="card-text"> <a href="https://drive.google.com/open?id=1rXSbCcMLrVzOVcoWBk9sUSFkuFVw8OcK"> MoneyCTRL app </a></p>
+		</div>
+        </div>
 	   
 	   
 
