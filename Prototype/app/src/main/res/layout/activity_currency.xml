@@ -33,7 +33,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="483dp"
-        android:background="#80FFAB00"
+        
         android:radius="5dp" />
 
 </RelativeLayout>
