@@ -64,7 +64,13 @@ public class ModelClass {
     }
 
     public ModelClass(int ID, Float amount, String payment_method, String category, String description, String date, boolean recurring) {
-       
+        this.ID = ID;
+        this.amount = amount;
+        this.payment_method = payment_method;
+        this.category = category;
+        this.description = description;
+        this.date = date;
+        this.recurring = recurring;
 
 
 
