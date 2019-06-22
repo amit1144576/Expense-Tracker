@@ -20,14 +20,6 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
              />
 
-        <TextView
-            android:id="@+id/spnItemDel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="#039BE5"
-            android:text="X"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
     </LinearLayout>
 
 </LinearLayout>
