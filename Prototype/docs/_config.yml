@@ -1,0 +1,5 @@
+name: ISEE 2019 -- Template
+markdown: kramdown
+baseurl: /https://dbse-teaching.github.io/isee2019-codepros/
+permalink: /blog/:year/:month/:day/:title/
+theme: jekyll-theme-dinky
