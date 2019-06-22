@@ -63,9 +63,5 @@ public class currency extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-        spinner.setPrompt("Select currency");
-
-    }
+   
 }
