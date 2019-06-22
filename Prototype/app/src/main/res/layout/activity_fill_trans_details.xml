@@ -118,7 +118,9 @@
         android:layout_marginEnd="121dp"
         android:layout_marginRight="121dp"
         android:layout_marginBottom="267dp"
-       
+        android:hint="Select Date"
+        android:textColor="#F8C016"
+        android:textColorHint="#C4F9A825"
         android:textSize="25dp" />
 </RelativeLayout>
 
