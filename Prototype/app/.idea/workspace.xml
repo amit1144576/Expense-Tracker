@@ -26,7 +26,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/prototype1/DatabaseClasses/MyDataBaseClass.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="389">
@@ -34,6 +34,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/prototype1/RecyclerVIewClasses/ModelClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -98,10 +107,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/prototype1/FillTransDetails.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_add_category.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/prototype1/DatabaseClasses/MyDataBaseClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/prototype1/RecyclerVIewClasses/ModelClass.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -140,6 +150,13 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="prototype1" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="DatabaseClasses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Prototype" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="prototype1" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="RecyclerVIewClasses" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Prototype" type="1abcf292:AndroidViewProjectNode" />
@@ -337,6 +354,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/prototype1/RecyclerVIewClasses/ModelClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
         </state>
       </provider>
     </entry>
