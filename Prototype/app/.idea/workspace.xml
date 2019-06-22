@@ -82,23 +82,24 @@
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_currency.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="38" />
+            <state relative-caret-position="245">
+              <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/prototype1/FillTransDetails.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_register.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="177" column="50" selection-start-line="177" selection-start-column="50" selection-end-line="177" selection-end-column="50" />
+            <state relative-caret-position="296">
+              <caret line="120" column="3" selection-start-line="120" selection-start-column="3" selection-end-line="120" selection-end-column="3" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -145,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/prototype1/RecyclerVIewClasses/ModelClass.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_fill_trans_details.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_currency.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/activity_register.xml" />
       </list>
     </option>
   </component>
@@ -415,8 +417,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_currency.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="38" />
+        <state relative-caret-position="245">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_register.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="120" column="3" selection-start-line="120" selection-start-column="3" selection-end-line="120" selection-end-column="3" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
