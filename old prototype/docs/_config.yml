@@ -1,0 +1,10 @@
+name: ISEE 2019 
+markdown: kramdown
+baseurl: "/isee2019-NOOBS.apk"
+permalink: /blog/:year/:month/:day/:title/
+
+theme: jekyll-theme-minimal
+title: ISEE--2019 NOOBS.apk
+description: Welcome to the NOOBS.apk Blog, here you can find all the ongoing events and progress of the NOOBS.apk project.
+logo: /images/NOOBS_Logo.png
+show_downloads: false
