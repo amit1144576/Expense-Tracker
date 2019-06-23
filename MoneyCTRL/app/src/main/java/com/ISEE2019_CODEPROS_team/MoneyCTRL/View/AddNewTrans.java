@@ -39,9 +39,6 @@ public class AddNewTrans extends AppCompatActivity implements DatePickerDialog.O
     private EditText transDate;
     private EditText transCategory;
 
-    //button to add new category
-    Button button;
-    ConstraintLayout addNewTransLayout;
 
     // back press exit
     private long backPressedTime;
@@ -98,20 +95,6 @@ public class AddNewTrans extends AppCompatActivity implements DatePickerDialog.O
             }
         });
 
-        // add new category as radiobutton
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RadioButton newCategory = new RadioButton(AddNewTrans.this);
-                addNewTransLayout = findViewById(R.id.AddNewTransLayout);
-                newCategory.setLayoutParams(new ConstraintLayout.LayoutParams(
-                        ConstraintLayout.LayoutParams.MATCH_PARENT,
-                        ConstraintLayout.LayoutParams.MATCH_PARENT
-                ));
-                addNewTransLayout.addView(newCategory);
-            }
-        });
     }
 
     // xxxxx
