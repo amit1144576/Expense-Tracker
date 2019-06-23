@@ -263,8 +263,8 @@ line-height: 28px;
 			<h4 class="card-title">Test Case 2</h4>
 			<p class="card-text"> Back press button in majority of android devices make it easy to revert back to previous page but sometimes it is annoying when you filled some data in a page and mistakenly you touch it.</p>
 			<p class="card-text"> Here we are making backpress button to be clicked double in order to leave AddNewTransaction Page.</p>
-			<p class="card-text"> By overridding onBackPressed() method and if condition we make it to differentiate between single and double click likely that if the second click being after 2000 miliseconds it will 
-			not proceed and will through a message "Press back again to cancel" to proceed accordingly</p>
+			<p class="card-text"> By overridding onBackPressed() method and using if condition inside that, we make the app to differentiate between single and double clicks likely that if the second click being after 2000 miliseconds it will 
+			not proceed and will throw a message "Press back again to cancel" to proceed accordingly</p>
 			<img class="card-img-top" src="images/BackPressButtonAddNewTrans.JPG" alt="BackPressButtonAddNewTrans">
 			</br></br>
 			<h4 class="card-title">Test Case 3</h4>
@@ -275,12 +275,15 @@ line-height: 28px;
 			<img class="card-img-top" src="images/DatePickerTestCase.JPG" alt="DatePickerTestCase">
 			</br></br>
 			<h4 class="card-title">Test Case 4</h4>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<img class="card-img-top" src="images/Software-Testing-WB.jpg" alt="WhiteBoxTest">
+			<p class="card-text"> Using method userLogin() authentication to app is validated provided that correct username and password supplied. since email is used as username, if incase this field being blank,
+			the authentication process will not proceed to validate based on database feedback but instead it will be cautched and an error message will be thrown "Email is required" and same applies to password field 
+			with the message "Password is required".</p>
+			<img class="card-img-top" src="images/LoginAuthentication.JPG" alt="LoginAuthentication">
 			</br></br>
 			<h4 class="card-title">Test Case 5</h4>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<img class="card-img-top" src="images/Software-Testing-WB.jpg" alt="WhiteBoxTest">
+			<p class="card-text"> In order to persistently save transactions in database we are using saveTrans() method and in order to prevent submission of missing data, we are testing amount field, description and date
+			to be provided otherwise a message will be shown to the user to fill required data "Please fill amount, description and pick a date".</p>
+			<img class="card-img-top" src="images/saveTransMethod.JPG" alt="saveTransMethod">
 			</br></br>
             </div>
         </div>

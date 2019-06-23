@@ -1,4 +1,4 @@
-package com.example.barchart;
+package com.example.applicationprototype;
 import android.app.Application;
 import android.os.AsyncTask;
 import android.provider.ContactsContract;

@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String email = editTextEmail1.getText().toString().trim();
         String password = editTextPassword1.getText().toString().trim();
 
-
         if(email.isEmpty()){
             editTextEmail1.setError("Email is required");
             editTextEmail1.requestFocus();
@@ -85,9 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editTextPassword1.setError("Password is required");
             editTextPassword1.requestFocus();
             return;
-
         }
-
         progressDialog.setMessage("Authenticating..");
         progressDialog.show();
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this,new OnCompleteListener<AuthResult>(){
@@ -101,16 +98,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     finish();
                     startActivity(new Intent(getApplicationContext(), AddTransactions.class));
                 }
-
-
             }
-
         });
-
-
-
-
-
     }
 
 
