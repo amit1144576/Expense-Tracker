@@ -107,8 +107,6 @@ line-height: 28px;
 
 
 
-
-
         <!-- Blog Post -->
 		
 		
@@ -253,10 +251,37 @@ line-height: 28px;
             <h2 class="card-title">White Box Testing</h2>
 			<p class="card-text"> White box testing is the testing method in which internal structure is known to the software tester.</p>
 			<p class="card-text"> There are test cases for five classes which four are testing Model package and one other attest sign in page.</p>
-			<p class="card-text"> This is based on a good rule of thumb to keep 80% of testing effort on business logic part of the code and 20% for UI </p>
-			<h2 class="card-title">title</h2>
+			<p class="card-text"> This is based on a good rule of thumb to keep 80% of testing effort on business logic part of the code and 20% for UI. Since 100% test coverage is exhaustive and on the other hand we are
+			following manual testing procedure, we are trying to increase the coverage and capture bugs and fix them randomly. Below You can follow five classes which we did testing for. </p>
+			<h4 class="card-title">Test Case 1</h4>
+			<p class="card-text"> We are doing Unit Testing for TransactionDao using AndroidJUnit4.</p>
+			<p class="card-text"> Using the notation @Rule we call InstantTaskExecutorRule class which is the library provided in androidx for testing purpose. 
+			And subsequently instaces of Database class and TransactionsDao is created. Under @Test notation by using onFetching_shouldGetEmptyList_IfTable_IsEmpty() method we 
+			are testing to get nothing if database being empty</p>
+			<img class="card-img-top" src="images/UnitTestingTransactionDao.JPG" alt="UnitTestingTransactionDao">
+			</br></br>
+			<h4 class="card-title">Test Case 2</h4>
+			<p class="card-text"> Back press button in majority of android devices make it easy to revert back to previous page but sometimes it is annoying when you filled some data in a page and mistakenly you touch it.</p>
+			<p class="card-text"> Here we are making backpress button to be clicked double in order to leave AddNewTransaction Page.</p>
+			<p class="card-text"> By overridding onBackPressed() method and if condition we make it to differentiate between single and double click likely that if the second click being after 2000 miliseconds it will 
+			not proceed and will through a message "Press back again to cancel" to proceed accordingly</p>
+			<img class="card-img-top" src="images/BackPressButtonAddNewTrans.JPG" alt="BackPressButtonAddNewTrans">
+			</br></br>
+			<h4 class="card-title">Test Case 3</h4>
+			<p class="card-text"> Using DatePickerFragment class and calling it in AddNewTransaction class we can pick date instead of manually writing it which is error prone. We overrided the
+			onDataSet() methode which inside that by building instance of Calender and assigning day, month and year info we can achieve this objective</p>
+			<img class="card-img-top" src="images/DatePickerTestClass.JPG" alt="DatePickerTestCase">
+			</br></br>
+			<img class="card-img-top" src="images/DatePickerTestCase.JPG" alt="DatePickerTestCase">
+			</br></br>
+			<h4 class="card-title">Test Case 4</h4>
 			<p class="card-text"> XXXXXXXXXXXXX</p>
+			<img class="card-img-top" src="images/Software-Testing-WB.jpg" alt="WhiteBoxTest">
+			</br></br>
+			<h4 class="card-title">Test Case 5</h4>
 			<p class="card-text"> XXXXXXXXXXXXX</p>
+			<img class="card-img-top" src="images/Software-Testing-WB.jpg" alt="WhiteBoxTest">
+			</br></br>
             </div>
         </div>
 		
@@ -265,12 +290,12 @@ line-height: 28px;
 	   <!-- Fourt Part of the blog -->
 		
         <div class="card mb-4">
-          <img class="card-img-top" src="images/teampresentation.JPG" alt="teampresentation">
+          <img class="card-img-top" src="images/Changes.JPG" alt="Changes">
           <div class="card-body">
              <h2 class="card-title">Summary Of Changes</h2>
-<li> Added charts : Pie Chart and Bar chart </li>
-<li> Added provision of user defined category </li>
-<li> Existing category can be deleted </li>
+				<li> Added charts : Pie Chart and Bar chart </li>
+				<li> Added provision of user defined category </li>
+				<li> Existing category can be deleted </li>
             </div>
         </div>
 		
