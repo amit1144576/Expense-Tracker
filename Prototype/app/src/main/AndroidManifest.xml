@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".filterByDate"></activity>
         <activity
             android:name=".Add_category"
             android:label="@string/title_activity_add_category"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".FillTransDetails"
             android:label="@string/title_activity_fill_trans_details"

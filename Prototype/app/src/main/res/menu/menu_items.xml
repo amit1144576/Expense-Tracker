@@ -2,17 +2,23 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Currency"
-        android:id="@+id/currency">
+
+    <item android:title="Category"
+        android:id="@+id/category">
 
     </item>
-    <item android:title="Add category"
-        android:id="@+id/category">
+    <item android:title="Currency"
+        android:id="@+id/currency">
 
     </item>
 
     <item android:title="Settings"
         android:id="@+id/setting">
+
+    </item>
+
+    <item android:title="Filter"
+        android:id="@+id/filter">
 
     </item>
 
