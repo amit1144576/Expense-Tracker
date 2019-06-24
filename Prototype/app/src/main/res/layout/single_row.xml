@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="#1600897B"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_amount"
+        android:text="Amount"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingLeft="7dp"
+        />
+
+    <TextView
+        android:id="@+id/rv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_amount"
+        android:layout_marginTop="-3dp"
+        android:paddingLeft="7dp"
+        android:text="date"
+        android:textSize="19sp" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_category"
+        android:layout_below="@+id/rv_date"
+        android:text="category"
+        android:textSize="15sp"
+        android:paddingLeft="7dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_payment"
+        android:layout_below="@+id/rv_category"
+        android:text="payment"
+        android:textSize="15sp"
+        android:paddingLeft="7dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_desc"
+        android:layout_below="@+id/rv_payment"
+        android:text="Description"
+        android:textSize="15sp"
+        android:paddingLeft="7dp"
+        />
+
+
+    <TextView
+        android:id="@+id/rv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@+id/rv_date"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-46dp"
+        android:layout_marginRight="24dp"
+        android:background="#F8C016"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="1"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>
