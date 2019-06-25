@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SpinnerAdapter extends ArrayAdapter<String> {
+public class SpinnerAdapter1 extends ArrayAdapter<String> {
     Context context;
     ArrayList<String> iName;
     ArrayList<String> iAbout;
@@ -21,7 +21,7 @@ public class SpinnerAdapter extends ArrayAdapter<String> {
     TextView spnItemName,spnItemDel;
     ImageView spnItemIcon;
 
-    public SpinnerAdapter(Context context, int textViewResourceId, ArrayList<String> objects, ArrayList<String> iName){
+    public SpinnerAdapter1(Context context, int textViewResourceId, ArrayList<String> objects, ArrayList<String> iName){
         super(context,textViewResourceId,objects);
         this.context = context;
         this.iName = iName;

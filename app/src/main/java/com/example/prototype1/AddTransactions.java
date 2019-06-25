@@ -1,5 +1,8 @@
 package com.example.prototype1;
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,36 +11,55 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.prototype1.DatabaseClasses.MyDataBaseClass;
+import com.google.android.gms.tasks.OnCompleteListener;
+
 
 import com.google.firebase.auth.FirebaseAuth;
 
 import static com.example.prototype1.R.id.fab;
 
-public class AddTransactions extends AppCompatActivity {
+public class AddTransactions extends AppCompatActivity implements View.OnClickListener{
 
 
 
+    MyDataBaseClass objMyDataBaseClass;
     private FirebaseAuth firebaseAuth;
+
+    private Button buttonShowAddedTrans;
+    private TextView showValues;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_add_transactions);
         Toolbar toolbar = findViewById(R.id.toolbar);
-       // FloatingActionButton fab = findViewById(R.id.fab);
+        buttonShowAddedTrans = (Button) findViewById(R.id.buttonShowAddedTrans);
+
         setSupportActionBar(toolbar);
-        firebaseAuth = FirebaseAuth.getInstance();
 
 
+       //fab.setOnClickListener(this);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+               // Toast.makeText(AddTransactions.this, "fab is clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(AddTransactions.this,FillTransDetails.class);
+                startActivity(intent);
+
             }
         });
+
+        findViewById(R.id.buttonShowAddedTrans).setOnClickListener(this);
     }
 
     @Override
@@ -55,23 +77,76 @@ public class AddTransactions extends AppCompatActivity {
 
         switch (id)
         {
-            case R.id.currency:
 
-                Toast.makeText(this,"home clicked",Toast.LENGTH_SHORT).show();
+
+            case R.id.category: {
+
+
+               finish();
+                Intent intent = new Intent(AddTransactions.this,Add_category.class);
+                startActivity(intent);
+
+                break;
+
+            }
+
+
+            case R.id.setting: {
+                //Toast.makeText(this, "setting is clicked", Toast.LENGTH_SHORT).show();
+                break;
+            }
+
+            case R.id.currency: {
+                //Toast.makeText(this, "Currency is clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, currency.class));
+                break;
+            }
 
             case R.id.logout: {
 
-                    firebaseAuth.signOut();
-                    finish();
-                    startActivity(new Intent(this, MainActivity.class));
+                   firebaseAuth.signOut();
+                   finish();
+                   startActivity(new Intent(this, MainActivity.class));
                     Toast.makeText(this, "User Logout success", Toast.LENGTH_SHORT).show();
+                    break;
 
             }
         }
 
 
 
-
         return true;
     }
+
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()) {
+
+
+
+            case R.id.buttonShowAddedTrans: {
+
+                Toast.makeText(this, "Button clicked", Toast.LENGTH_LONG).show();
+
+                startActivity(new Intent(this, ShowValues.class));
+
+
+                break;
+
+            }
+        }
+
 }
+}
+

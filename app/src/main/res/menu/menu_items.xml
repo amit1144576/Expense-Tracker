@@ -6,6 +6,10 @@
         android:id="@+id/currency">
 
     </item>
+    <item android:title="Add category"
+        android:id="@+id/category">
+
+    </item>
 
     <item android:title="Settings"
         android:id="@+id/setting">
