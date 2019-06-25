@@ -98,7 +98,7 @@ public class ShowValues extends AppCompatActivity {
             }
 
             else   {
-                Toast.makeText(this, "DataBase is null", Toast.LENGTH_LONG).show();
+               
             }
 
         }
