@@ -60,19 +60,7 @@
             android:layout_marginLeft="10dp"
             android:text="Category" />
 
-        <TextView
-            android:id="@+id/trans_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/trans_date"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_toStartOf="@+id/trans_category"
-            android:layout_toLeftOf="@+id/trans_category"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="Description" />
-
+       
 
     </RelativeLayout>
 
