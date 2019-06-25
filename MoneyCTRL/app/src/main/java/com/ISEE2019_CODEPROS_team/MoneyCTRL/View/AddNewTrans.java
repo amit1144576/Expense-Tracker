@@ -39,9 +39,6 @@ public class AddNewTrans extends AppCompatActivity implements DatePickerDialog.O
     private EditText transDate;
     private EditText transCategory;
 
-    //button to add new category
-    Button button;
-    ConstraintLayout addNewTransLayout;
 
     // back press exit
     private long backPressedTime;
@@ -98,20 +95,6 @@ public class AddNewTrans extends AppCompatActivity implements DatePickerDialog.O
             }
         });
 
-        // add new category as radiobutton
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RadioButton newCategory = new RadioButton(AddNewTrans.this);
-                addNewTransLayout = findViewById(R.id.AddNewTransLayout);
-                newCategory.setLayoutParams(new ConstraintLayout.LayoutParams(
-                        ConstraintLayout.LayoutParams.MATCH_PARENT,
-                        ConstraintLayout.LayoutParams.MATCH_PARENT
-                ));
-                addNewTransLayout.addView(newCategory);
-            }
-        });
     }
 
     // xxxxx
@@ -126,7 +109,7 @@ public class AddNewTrans extends AppCompatActivity implements DatePickerDialog.O
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.save_note:
-                saveTrans();
+               // saveTrans();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -134,7 +117,7 @@ public class AddNewTrans extends AppCompatActivity implements DatePickerDialog.O
         }
     }
 
-
+/*
     private void saveTrans() {
         Double amount = Double.parseDouble(transAmount.getText().toString());
         String description = transDescription.getText().toString();
@@ -155,7 +138,7 @@ public class AddNewTrans extends AppCompatActivity implements DatePickerDialog.O
         setResult(RESULT_OK, data);
         finish();
     }
-
+*/
 
     //selecting categories of expenses, the toast messages need to be changed later into some other operations
 

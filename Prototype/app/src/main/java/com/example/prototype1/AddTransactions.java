@@ -23,16 +23,23 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import static com.example.prototype1.R.id.fab;
 
-public class AddTransactions extends AppCompatActivity implements View.OnClickListener{
+public class AddTransactions extends AppCompatActivity {
 
 
-
+<<<<<<< HEAD
     MyDataBaseClass objMyDataBaseClass;
     private FirebaseAuth firebaseAuth;
 
     private Button buttonShowAddedTrans;
     private TextView showValues;
 
+=======
+    MyDataBaseClass myDB1;
+    private FirebaseAuth firebaseAuth;
+
+    private Button buttonShowAddedTrans;
+    Button button;
+>>>>>>> b11d722d05804fe3a5e0063770b2a65ffed3e2f2
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +48,21 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_add_transactions);
+        myDB1 = new MyDataBaseClass(this);
         Toolbar toolbar = findViewById(R.id.toolbar);
         buttonShowAddedTrans = (Button) findViewById(R.id.buttonShowAddedTrans);
 
         setSupportActionBar(toolbar);
+
+        button = (Button) findViewById(R.id.buttonFilter);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent filterIntent = new Intent(AddTransactions.this,filterByDate.class);
+                startActivity(filterIntent);
+            }
+        });
 
 
        //fab.setOnClickListener(this);
@@ -59,7 +77,7 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
             }
         });
 
-        findViewById(R.id.buttonShowAddedTrans).setOnClickListener(this);
+        //findViewById(R.id.buttonShowAddedTrans).setOnClickListener(this);
     }
 
     @Override
@@ -88,6 +106,12 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
 
                 break;
 
+            }
+
+            case R.id.filter: {
+                //Toast.makeText(this, "Currency is clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, filterByDate.class));
+                break;
             }
 
 
@@ -124,11 +148,15 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
 
 
 
+<<<<<<< HEAD
 
 
 
 
     @Override
+=======
+   /* @Override
+>>>>>>> b11d722d05804fe3a5e0063770b2a65ffed3e2f2
     public void onClick(View v) {
 
         switch (v.getId()) {
@@ -147,6 +175,6 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
             }
         }
 
-}
+}*/
 }
 

@@ -15,7 +15,52 @@
 
   <!-- Custom styles for this template -->
   <link href="css/blog-home.css" rel="stylesheet">
+  <style>
+.firstcolumnH {
+background-color: gray;
+color: white;
+width: 150px;
+padding: 7px;
+}
 
+.descriptionH {
+background-color: gray;
+color: white;
+padding: 7px;
+}
+
+.firstcolumnRodd {
+background-color: whitesmoke;
+width: 150px;
+padding: 5px;
+}
+
+.descriptionRodd {
+background-color: whitesmoke;
+padding: 5px;
+}
+
+.firstcolumnReven {
+background-color: white;
+width: 150px;
+padding: 5px;
+}
+
+.descriptionReven {
+background-color: white;
+padding: 5px;
+}
+
+#contents {
+background: whitesmoke;
+max-width: 350px;
+padding: 10px;
+border: 1px solid;
+border-color: gray;
+border-radius: 3px;
+line-height: 28px;
+}
+</style>
 </head>
 
 <body>
@@ -62,43 +107,136 @@
 
 
 
-
-
         <!-- Blog Post -->
 		
 		
 		<!-- First Part of the blog -->
 		
-        <div class="card mb-4">
-          <img class="card-img-top" src="images/testing_image.jpg" alt="Software Testing">
+		<div class="card mb-4">
           <div class="card-body">
-            <h2 class="card-title">Testing the App </h2>
-			<p class="card-text"> In here , we will demonstrate the testing of the andriod with some use cases . The testing is done in 2 phases :</p>
-		  <li> * Black Box Testing </li>
-		  <li> * White Box Testing </li>
-		  </br>
-			<p class="card-text"> Black Box testing : Using this approach, as the name itself suggests, we will be testing the application without knowing the internal structure or components present in it .We just provide different inputs and check whether we are getting outputs as per our calculations and predictions . </p>
-		</br>
-			<p class="card-text"> White Box Testing : This method is almost opposite of black box testing wherein the person or the user testing will be fully aware of the inner workings,design and components  of the application.</p>
-	      </br>
+		  <img class="card-img-top" src="images/BetaPrototype.JPG" alt="Welcome">
+			<p class="card-text"> Welcome to our fifth blog which is regarding testing of the app. Here we will discuss testing process and different approaches that we went over to </p>
+			
             </div>
         </div>
 		
 		
 		
+		<div class="card mb-4">
+			<img class="card-img-top" src="images/Software-Testing.jpg" alt="Software Testing">
+          <img class="card-img-top" src="images/testingprocess.JPG" alt="Software Testing">
+          <div class="card-body">
+            <h2 class="card-title">Testing Process and Test Design Techniques  </h2>
+			<p class="card-text"> There are several testing processes which require to be done in parallel or different stages and several techniques inheret in. Test dsign techniques can be experimental based, structred based or specification based.
+			 While specification based is functional and blackbox procedure will be applied to and structure based conforms to white box procedure.</p>
+			<p class="card-text"> <h5> Black Box testing:</h5> Using this approach, as the name itself suggests, we will be testing the application without knowing the internal structure or components present in it .We just provide different inputs and check whether we are getting outputs as per our calculations and predictions. </p>
+			<p class="card-text"> <h5> White Box Testing:</h5> This method is almost opposite of black box testing wherein the person or the user testing will be fully aware of the inner workings,design and components  of the application.</p>
+			<p class="card-text"> We will follow with testing</p>
+			<h4 class="card-title">Manual Testing  </h4>
+			<p class="card-text"> Manual Testing is the process of finding out the defects, bugs in a software program manually and not automatically.
+			we perform user role and verify all the requirements are maintained</p>
+			<img class="card-img-top" src="images/ManualTesting.JPG" alt="manual Testing">
+		 </div>
+        </div>
 		
+		
+	
 		
 	   <!-- Second Part of the blog -->
 		
         <div class="card mb-4">
-          <img class="card-img-top" src="images/teampresentation.JPG" alt="teampresentation">
+          <img class="card-img-top" src="images/Software-Testing-BB.jpg" alt="Blackbox">
           <div class="card-body">
-            <h2 class="card-title">title</h2>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<h2 class="card-title">title</h2>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
+            <h2 class="card-title">Black Box Testing</h2>
+			<p class="card-text"> Black box testing is the testing method in which internal structure is unknown to the software tester. Using black box testing or functional test or external testing, we are going to test performance of application based on user stories cenarios</p>
+			<h2 class="card-title">Scenarios :</h2>
+      <h3> Scenario 1  </h3>
+      <table>
+      <tr>
+      <th class="firstcolumnH">Requirement</th>
+      <th class="descriptionH">Action Performed</th>
+      <th class="descriptionH">Expected Output</th>
+      <th class="descriptionH">Test result</th>
+
+      </tr>
+      <tr>
+      <td class="firstcolumnRodd">To check whether user is redirected to login page after Registration</td>
+      <td class="descriptionRodd">Toggle screen : After entering his details like username ,password the user clicks on the Regsiter button </td>
+      <td class="descriptionRodd">Registered successfully message should be displayed and goes to Login page</td>
+      <td class="descriptionRodd">Passed</td>
+      </tr>
+      </table>
+      </br></br>
+      <h3> Scenario 2  </h3>
+      <table>
+      <tr>
+      <th class="firstcolumnH">Requirement</th>
+      <th class="descriptionH">Action Performed</th>
+      <th class="descriptionH">Expected Output</th>
+      <th class="descriptionH">Test result</th>
+
+      </tr>
+      <tr>
+      <td class="firstcolumnRodd">To save transaction data</td>
+      <td class="descriptionRodd">The user adds a new transaction by clicking on the + button and enters the details (amount,desc)and presses save </td>
+      <td class="descriptionRodd">The transaction should reflect in the Transactions Page</td>
+      <td class="descriptionRodd">Passed</td>
+      </tr>
+      </table>
+      </br></br>
+      <h3> Scenario 3  </h3>
+      <table>
+      <tr>
+      <th class="firstcolumnH">Requirement</th>
+      <th class="descriptionH">Action Performed</th>
+      <th class="descriptionH">Expected Output</th>
+      <th class="descriptionH">Test result</th>
+
+      </tr>
+      <tr>
+      <td class="firstcolumnRodd">To select currency of my transactions</td>
+      <td class="descriptionRodd">The user clicks on the 3 dots to goto settings page .There he can change the currency from a dropdown list </td>
+      <td class="descriptionRodd">The transactions (existing and new) change to the new currency</td>
+      <td class="descriptionRodd">Passed</td>
+      </tr>
+      </table>
+      </br></br>
+      <h3> Scenario 4  </h3>
+      <table>
+      <tr>
+      <th class="firstcolumnH">Requirement</th>
+      <th class="descriptionH">Action Performed</th>
+      <th class="descriptionH">Expected Output</th>
+      <th class="descriptionH">Test result</th>
+
+      </tr>
+      <tr>
+      <td class="firstcolumnRodd">To exit the application</td>
+      <td class="descriptionRodd">The user clicks on the 3 dots to find the settings page .There , he  clicks on the Logout option</td>
+      <td class="descriptionRodd">The user exits the application</td>
+      <td class="descriptionRodd">Passed</td>
+      </tr>
+      </table>
+      </br></br>
+    </table>
+    </br></br>
+    <h3> Scenario 5  </h3>
+    <table>
+    <tr>
+    <th class="firstcolumnH">Requirement</th>
+    <th class="descriptionH">Action Performed</th>
+    <th class="descriptionH">Expected Output</th>
+    <th class="descriptionH">Test result</th>
+
+    </tr>
+    <tr>
+    <td class="firstcolumnRodd">The user should be able to view all transactions</td>
+    <td class="descriptionRodd">The user logins to the applicatin and gets redirected to the transactions page</td>
+    <td class="descriptionRodd">The user should be able to see all of his previous transactions</td>
+    <td class="descriptionRodd">Passed</td>
+    </tr>
+    </table>
+    </br></br>
             </div>
         </div>
 		
@@ -108,14 +246,45 @@
 		<!-- Third Part of the blog -->
 		
         <div class="card mb-4">
-          <img class="card-img-top" src="images/WhiteBoxTestClasses.JPG" alt="WhiteBoxTestClasses">
+          <img class="card-img-top" src="images/Software-Testing-WB.jpg" alt="WhiteBoxTest">
           <div class="card-body">
             <h2 class="card-title">White Box Testing</h2>
+			<p class="card-text"> White box testing is the testing method in which internal structure is known to the software tester.</p>
 			<p class="card-text"> There are test cases for five classes which four are testing Model package and one other attest sign in page.</p>
-			<p class="card-text"> This is based on a good rule of thumb to keep 80% of testing effort on business logic part of the code and 20% for UI </p>
-			<h2 class="card-title">title</h2>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
+			<p class="card-text"> This is based on a good rule of thumb to keep 80% of testing effort on business logic part of the code and 20% for UI. Since 100% test coverage is exhaustive and on the other hand we are
+			following manual testing procedure, we are trying to increase the coverage and capture bugs and fix them randomly. Below You can follow five classes which we did testing for. </p>
+			<h4 class="card-title">Test Case 1</h4>
+			<p class="card-text"> We are doing Unit Testing for TransactionDao using AndroidJUnit4.</p>
+			<p class="card-text"> Using the notation @Rule we call InstantTaskExecutorRule class which is the library provided in androidx for testing purpose. 
+			And subsequently instaces of Database class and TransactionsDao is created. Under @Test notation by using onFetching_shouldGetEmptyList_IfTable_IsEmpty() method we 
+			are testing to get nothing if database being empty</p>
+			<img class="card-img-top" src="images/UnitTestingTransactionDao.JPG" alt="UnitTestingTransactionDao">
+			</br></br>
+			<h4 class="card-title">Test Case 2</h4>
+			<p class="card-text"> Back press button in majority of android devices make it easy to revert back to previous page but sometimes it is annoying when you filled some data in a page and mistakenly you touch it.</p>
+			<p class="card-text"> Here we are making backpress button to be clicked double in order to leave AddNewTransaction Page.</p>
+			<p class="card-text"> By overridding onBackPressed() method and using if condition inside that, we make the app to differentiate between single and double clicks likely that if the second click being after 2000 miliseconds it will 
+			not proceed and will throw a message "Press back again to cancel" to proceed accordingly</p>
+			<img class="card-img-top" src="images/BackPressButtonAddNewTrans.JPG" alt="BackPressButtonAddNewTrans">
+			</br></br>
+			<h4 class="card-title">Test Case 3</h4>
+			<p class="card-text"> Using DatePickerFragment class and calling it in AddNewTransaction class we can pick date instead of manually writing it which is error prone. We overrided the
+			onDataSet() methode which inside that by building instance of Calender and assigning day, month and year info we can achieve this objective</p>
+			<img class="card-img-top" src="images/DatePickerTestClass.JPG" alt="DatePickerTestCase">
+			</br></br>
+			<img class="card-img-top" src="images/DatePickerTestCase.JPG" alt="DatePickerTestCase">
+			</br></br>
+			<h4 class="card-title">Test Case 4</h4>
+			<p class="card-text"> Using method userLogin() authentication to app is validated provided that correct username and password supplied. since email is used as username, if incase this field being blank,
+			the authentication process will not proceed to validate based on database feedback but instead it will be cautched and an error message will be thrown "Email is required" and same applies to password field 
+			with the message "Password is required".</p>
+			<img class="card-img-top" src="images/LoginAuthentication.JPG" alt="LoginAuthentication">
+			</br></br>
+			<h4 class="card-title">Test Case 5</h4>
+			<p class="card-text"> In order to persistently save transactions in database we are using saveTrans() method and in order to prevent submission of missing data, we are testing amount field, description and date
+			to be provided otherwise a message will be shown to the user to fill required data "Please fill amount, description and pick a date".</p>
+			<img class="card-img-top" src="images/saveTransMethod.JPG" alt="saveTransMethod">
+			</br></br>
             </div>
         </div>
 		
@@ -124,14 +293,13 @@
 	   <!-- Fourt Part of the blog -->
 		
         <div class="card mb-4">
-          <img class="card-img-top" src="images/teampresentation.JPG" alt="teampresentation">
+          <img class="card-img-top" src="images/Changes.JPG" alt="Changes">
           <div class="card-body">
-            <h2 class="card-title">title</h2>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<h2 class="card-title">title</h2>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
-			<p class="card-text"> XXXXXXXXXXXXX</p>
+             <h2 class="card-title">Summary Of Changes</h2>
+				<li> Added charts : Pie Chart and Bar chart </li>
+				<li> Added provision of user defined category </li>
+		  		<li> Transactions can be filtered by dates</li>
+				<li> Existing category can be deleted </li>
             </div>
         </div>
 		

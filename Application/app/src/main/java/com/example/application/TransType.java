@@ -1,4 +1,4 @@
-package com.example.barchart;
+package com.example.applicationprototype;
 
 public enum TransType {
 Income, Expendature;

@@ -1,6 +1,7 @@
 package com.example.prototype1.DatabaseClasses;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -44,6 +45,30 @@ public class MyDataBaseClass extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+    }
+
+    public Cursor monthData(String startdate, String enddate) {
+
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String table = "TransactionsTable";
+        String[] columns = new String[]{
+                "Amount", "Payment_method", "Category", "T_Date", "Description"
+        };
+
+        String selection = null;
+        String[] selectionArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = "Date DESC";
+        String limit = "10";
+
+
+        Cursor res = db.rawQuery("select * from " + table + " where Date BETWEEN '" + startdate + "' AND '" + enddate + "' ORDER BY Date ASC", null);
+        return res;
+
 
     }
 }
