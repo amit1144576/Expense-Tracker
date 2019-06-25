@@ -2,6 +2,7 @@ package com.example.prototype1;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,7 +12,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.prototype1.DatabaseClasses.MyDataBaseClass;
 import com.google.android.gms.tasks.OnCompleteListener;
 
 
@@ -23,9 +27,12 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
 
 
 
+    MyDataBaseClass objMyDataBaseClass;
     private FirebaseAuth firebaseAuth;
 
     private Button buttonShowAddedTrans;
+    private TextView showValues;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +43,7 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_add_transactions);
         Toolbar toolbar = findViewById(R.id.toolbar);
         buttonShowAddedTrans = (Button) findViewById(R.id.buttonShowAddedTrans);
-       // FloatingActionButton fab = findViewById(R.id.fab);
+
         setSupportActionBar(toolbar);
 
 
@@ -117,6 +124,10 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
 
 
 
+
+
+
+
     @Override
     public void onClick(View v) {
 
@@ -126,6 +137,9 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
 
             case R.id.buttonShowAddedTrans: {
 
+                Toast.makeText(this, "Button clicked", Toast.LENGTH_LONG).show();
+
+                startActivity(new Intent(this, ShowValues.class));
 
 
                 break;
