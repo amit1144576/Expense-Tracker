@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+
         <activity android:name=".ShowValues"></activity>
-=======
+
         <activity android:name=".filterByDate"></activity>
->>>>>>> b11d722d05804fe3a5e0063770b2a65ffed3e2f2
+
         <activity
             android:name=".Add_category"
             android:label="@string/title_activity_add_category"
