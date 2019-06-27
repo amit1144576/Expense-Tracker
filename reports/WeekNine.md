@@ -33,11 +33,11 @@
 
 | Tasks        | To be  Actualized by |   Completed / Moved / Continious/ Done by|
 | ------------- |:-------------:|:-------------:|
-| UI | Amit Kumar| Completed | Continious |
-| Backend |Chigozie Kenneth | Continious |
-| UI | Suhas Shantharam | Continious |
-| Backend| Saied Akbar Ahmady | Continious |
-| Management and Organisations | Nazar Iqbal Warraich |Continious |
+| Application Development | Amit Kumar| Continious|
+| Application Developmen and Team Management |Chigozie Kenneth |Continious|
+| Blogs and Documentation | Suhas Shantharam |Continious|
+| Blogs and Documentation| Saied Akbar Ahmady | Continious|
+| Blogs and Documentation | Nazar Iqbal Warraich |Continious|
 
 
 
