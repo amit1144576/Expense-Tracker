@@ -31,7 +31,7 @@
 
 
 | Tasks        | To be  Actualized by |   Completed / Moved / Continous/ Done by|
-| ------------- |:-------------:|
+| ------------- |:-------------:| :-------------:|
 | UI | Amit Kumar| Completed |
 | Backend |Chigozie Kenneth | Completed |
 | UI | Suhas Shantharam | Completed |
