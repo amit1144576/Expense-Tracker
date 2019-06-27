@@ -32,7 +32,7 @@
 
 
 | Tasks        | To be  Actualized by |   Completed / Moved / Continious/ Done by|
-| ------------- |:-------------:|
+| ------------- |:-------------:|:-------------:|
 | UI | Amit Kumar| Completed | Continious |
 | Backend |Chigozie Kenneth | Continious |
 | UI | Suhas Shantharam | Continious |
