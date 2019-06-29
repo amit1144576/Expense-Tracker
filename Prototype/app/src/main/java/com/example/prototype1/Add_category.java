@@ -40,15 +40,15 @@ public class Add_category extends AppCompatActivity implements View.OnClickListe
     }
 
 
- public void onClick(View v) {
+    public void onClick(View v) {
 
 
 
-            switch (v.getId()) {
+        switch (v.getId()) {
 
             case R.id.buttonAddCategory: {
                 newCat = editTextCategory.getText().toString().trim();
-               finish();
+                finish();
                 Intent intent = new Intent(Add_category.this,AddTransactions.class);
                 startActivity(intent);
                 break;

@@ -17,8 +17,7 @@
             android:layout_width="423dp"
             android:layout_height="match_parent"
             android:background="#775615"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="Welomce!" />
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 

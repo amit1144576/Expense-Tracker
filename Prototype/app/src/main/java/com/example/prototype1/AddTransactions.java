@@ -12,47 +12,59 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.prototype1.DatabaseClasses.MyDataBaseClass;
 import com.google.android.gms.tasks.OnCompleteListener;
 
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import static com.example.prototype1.R.id.buttonFilter;
 import static com.example.prototype1.R.id.fab;
 
-public class AddTransactions extends AppCompatActivity implements View.OnClickListener{
+public class AddTransactions extends AppCompatActivity {
 
 
-
+    MyDataBaseClass myDB1;
     private FirebaseAuth firebaseAuth;
 
-    private Button buttonShowAddedTrans;
+    Button buttonShowAddedTrans;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_add_transactions);
+        myDB1 = new MyDataBaseClass(this);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        buttonShowAddedTrans = (Button) findViewById(R.id.buttonShowAddedTrans);
-       // FloatingActionButton fab = findViewById(R.id.fab);
+        //buttonShowAddedTrans = (Button) findViewById(R.id.buttonShowAddedTrans);
+        button = (Button) findViewById(R.id.buttonFilter);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent filterIntent = new Intent(AddTransactions.this,filterByDate.class);
+                startActivity(filterIntent);
+            }
+        });
+
+
+        // FloatingActionButton fab = findViewById(R.id.fab);
         setSupportActionBar(toolbar);
+        firebaseAuth = FirebaseAuth.getInstance();
 
-
-       //fab.setOnClickListener(this);
+        //fab.setOnClickListener(this);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Toast.makeText(AddTransactions.this, "fab is clicked", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(AddTransactions.this, "fab is clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(AddTransactions.this,FillTransDetails.class);
                 startActivity(intent);
 
             }
         });
 
-        findViewById(R.id.buttonShowAddedTrans).setOnClickListener(this);
     }
 
     @Override
@@ -70,20 +82,6 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
 
         switch (id)
         {
-
-
-            case R.id.category: {
-
-
-               finish();
-                Intent intent = new Intent(AddTransactions.this,Add_category.class);
-                startActivity(intent);
-
-                break;
-
-            }
-
-
             case R.id.setting: {
                 //Toast.makeText(this, "setting is clicked", Toast.LENGTH_SHORT).show();
                 break;
@@ -94,14 +92,18 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
                 startActivity(new Intent(this, currency.class));
                 break;
             }
-
+            case R.id.filter: {
+                //Toast.makeText(this, "Currency is clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, filterByDate.class));
+                break;
+            }
             case R.id.logout: {
 
-                   firebaseAuth.signOut();
-                   finish();
-                   startActivity(new Intent(this, MainActivity.class));
-                    Toast.makeText(this, "User Logout success", Toast.LENGTH_SHORT).show();
-                    break;
+                firebaseAuth.signOut();
+                finish();
+                startActivity(new Intent(this, MainActivity.class));
+                Toast.makeText(this, "User Logout success", Toast.LENGTH_SHORT).show();
+                break;
 
             }
         }
@@ -113,11 +115,60 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
 
 
 
+      /*private void viewTransactions(){
 
 
+        buttonShowAddedTrans.setOnClickListener(
+
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Cursor res = myDB.getAllData();
+
+                        if(res.getCount()==0){
+                           showMessage("Error","No data found.");
+                            return;
+                        }
+
+                        StringBuffer buffer = new StringBuffer();
+
+                        while (res.moveToNext()){
+
+                            buffer.append("Amount : " + res.getString(1)+"\n");
+                            buffer.append("Payment : " + res.getString(2)+"\n");
+                            buffer.append("Category : " + res.getString(3)+"\n");
+                            buffer.append("Date : " + res.getString(5)+"\n");
+                            buffer.append("Comments : " + res.getString(4)+"\n\n");
+
+                        }
+
+                        //Show all data
+                       showMessage("Transactions",buffer.toString());
+
+                    }
+
+                }
+        );
 
 
-    @Override
+        }
+*/
+
+/*
+    public void showMessage(String title,String Message){
+
+        AlertDialog.Builder builder =  new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(Message);
+        builder.show();
+
+    }
+*/
+
+
+/*    @Override
     public void onClick(View v) {
 
         switch (v.getId()) {
@@ -126,13 +177,40 @@ public class AddTransactions extends AppCompatActivity implements View.OnClickLi
 
             case R.id.buttonShowAddedTrans: {
 
+                Toast.makeText(AddTransactions.this,"Button clicked",Toast.LENGTH_LONG).show();
 
+                DatabaseHelper db1 = new DatabaseHelper(this);
 
+                Toast.makeText(AddTransactions.this,"Button clicked",Toast.LENGTH_LONG).show();
+
+                Cursor res = db1.getAllData();
+
+                if (res.getCount() == 0) {
+                    showMessage("Error", "No data found.");
+                    return;
+                }
+
+                StringBuffer buffer = new StringBuffer();
+
+                while (res.moveToNext()) {
+
+                    buffer.append("ID : " + res.getString(0) + "\n");
+                    buffer.append("Amount : " + res.getString(1) + "\n");
+                    buffer.append("Payment : " + res.getString(2) + "\n");
+                    buffer.append("Category : " + res.getString(3) + "\n");
+                    buffer.append("Date : " + res.getString(5) + "\n");
+                    buffer.append("Recurring : " + res.getString(6) + "\n");
+                    buffer.append("Comments : " + res.getString(4) + "\n\n");
+
+                }
+
+                //Show all data
+                showMessage("Transactions", buffer.toString());
                 break;
 
             }
         }
 
-}
+}*/
 }
 

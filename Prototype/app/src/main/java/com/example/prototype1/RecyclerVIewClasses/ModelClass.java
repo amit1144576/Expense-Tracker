@@ -7,6 +7,18 @@ public class ModelClass {
     String payment_method,category,description,date;
     boolean recurring;
 
+    public ModelClass(int ID, Float amount, String payment_method, String category, String description, String date) {
+        this.ID = ID;
+        this.amount = amount;
+        this.payment_method = payment_method;
+        this.category = category;
+        this.description = description;
+        this.date = date;
+
+
+
+    }
+
     public int getID() {
         return ID;
     }
@@ -55,24 +67,7 @@ public class ModelClass {
         this.date = date;
     }
 
-    public boolean isRecurring() {
-        return recurring;
-    }
-
-    public void setRecurring(boolean recurring) {
-        this.recurring = recurring;
-    }
-
-    public ModelClass(int ID, Float amount, String payment_method, String category, String description, String date, boolean recurring) {
-        this.ID = ID;
-        this.amount = amount;
-        this.payment_method = payment_method;
-        this.category = category;
-        this.description = description;
-        this.date = date;
-        this.recurring = recurring;
 
 
 
-    }
 }
