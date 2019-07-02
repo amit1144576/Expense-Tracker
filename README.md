@@ -19,6 +19,6 @@ The link to the basic prototype .apk file: https://drive.google.com/open?id=1Rml
 
 The link to the advance prototype .apk file: https://drive.google.com/open?id=1rXSbCcMLrVzOVcoWBk9sUSFkuFVw8OcK
 
-The link to the final .apk file: https://drive.google.com/open?id=1PUokRnVM2hSVDaQwA2mF2kTmJ3oXEC9j
+The link to the final .apk file: https://drive.google.com/file/d/1KhmB8E1bRlycwdQjs27nBC2nxsbhEr6d/view?usp=sharing
 
 Please follow our progress as well as documentation in our blog using the link https://dbse-teaching.github.io/isee2019-codepros/
