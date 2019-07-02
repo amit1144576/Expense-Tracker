@@ -159,7 +159,7 @@ public class FillTransDetails extends AppCompatActivity {
 
                     ContentValues objContentValues = new ContentValues();
 
-                    objContentValues.put("Amount",Integer.parseInt(editTextAmount.getText().toString()));
+                    objContentValues.put("Amount",Float.parseFloat(editTextAmount.getText().toString()));
                     objContentValues.put("Payment",spinnerPaymentType.getSelectedItem().toString());
                     objContentValues.put("Category",spinnerCategory.getSelectedItem().toString());
                     objContentValues.put("Date",mDisplayDate.getText().toString());
