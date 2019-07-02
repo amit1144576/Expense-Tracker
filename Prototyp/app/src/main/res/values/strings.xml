@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Prototype1</string>
+
+    <string name="title_activity_Register">Register</string>
+    <string name="title_activity_add_transactions">AddTransactions</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_transactions">transactions</string>
+
+    <string name="title_activity_fill_trans_details">FillTransDetails</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title" />
+
+    <array name="Category">
+        <item>Food</item>
+        <item>Travel</item>
+        <item>Clothes</item>
+        <item>Add category</item>
+    </array>
+
+    <array name="paymentType">
+        <item>Cash</item>
+        <item>Card</item>
+    </array>
+
+</resources>
