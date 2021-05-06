@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".FillTransDetails"
+            android:label="@string/title_activity_fill_trans_details"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".currency" />
+        <activity
             android:name=".AddTransactions"
             android:label="@string/title_activity_add_transactions"
             android:theme="@style/AppTheme.NoActionBar" />

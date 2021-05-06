@@ -1,34 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".FillTransDetails">
 
-    <android.support.design.widget.AppBarLayout
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="305dp"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginBottom="641dp"
+        android:ems="10"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        android:textColor="#F8C016"
+        android:textColorHint="#C4F9A825" />
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_fill_trans_details"/>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinnerPaymentType"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="314dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginBottom="539dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/paymentType"
+        android:popupBackground="@drawable/gradient"
+        android:spinnerMode="dialog"
+        android:textColor="#F8C016"
+        android:textColorHint="#C4F9A825"
+        android:visibility="visible"
+        tools:visibility="visible" />
 
-</android.support.design.widget.CoordinatorLayout>
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginBottom="438dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/Category"
+        android:popupBackground="@drawable/gradient"
+        android:spinnerMode="dialog"
+        android:textColor="#F8C016"
+        android:textColorHint="#C4F9A825"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="49dp"
+        android:layout_marginRight="49dp"
+        android:layout_marginBottom="338dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Description.."
+        android:inputType="textMultiLine"
+        android:textColor="#F8C016"
+        android:textColorHint="#C4F9A825" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="136dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
+        android:layout_marginBottom="92dp"
+        android:clickable="true"
+        android:background="#C4F9A825"
+        android:text="Add" />
+
+    <Switch
+        android:id="@+id/switchRecurring"
+        android:layout_width="118dp"
+        android:layout_height="39dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="161dp"
+        android:layout_marginRight="161dp"
+        android:layout_marginBottom="182dp"
+        android:hint="Recurring"
+        android:textColorHint="#C4F9A825" />
+
+    <TextView
+        android:id="@+id/textViewChooseDate"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="121dp"
+        android:layout_marginRight="121dp"
+        android:layout_marginBottom="267dp"
+        android:hint="Select Date"
+        android:textColor="#F8C016"
+        android:textColorHint="#C4F9A825"
+        android:textSize="25dp" />
+</RelativeLayout>
+
